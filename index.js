@@ -1,5 +1,6 @@
 import fp from "fastify-plugin";
 import { Parser } from "./lib/Parser.js";
+import { ParserV3 } from "./lib/Parser.v3.js";
 import { SecurityError, SecurityHandlers } from "./lib/securityHandlers.js";
 
 function checkObject(obj, name) {
@@ -161,7 +162,7 @@ const fastifyOpenapiGlue = fp(plugin, {
 });
 
 export default fastifyOpenapiGlue;
-export { fastifyOpenapiGlue, SecurityError };
+export { fastifyOpenapiGlue, SecurityError, ParserV3 };
 
 export const options = {
 	specification: "examples/petstore/petstore-openapi.v3.json",

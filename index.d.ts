@@ -38,6 +38,12 @@ declare interface SecurityError extends Error {
 	errors: Array<Error>;
 }
 
+export class Parser {
+	parse(specification: object, options?: any): Promise<any>;
+}
+export class ParserV3 extends Parser {}
+export class ParserV2 extends Parser {}
+
 export default fastifyOpenapiGlue;
 export { fastifyOpenapiGlue };
 export type { SecurityError };
