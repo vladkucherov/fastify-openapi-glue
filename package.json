@@ -61,7 +61,6 @@
 	},
 	"homepage": "https://github.com/seriousme/fastify-openapi-glue#readme",
 	"exports": {
-		"import": "./index.js",
-		"default": "./index.js"
+		".": "./index.js"
 	}
 }
