@@ -11,7 +11,7 @@
 	"types": "index.d.ts",
 	"scripts": {
 		"start": "fastify start --options examples/petstore/index.js",
-		"build": "mkdir -p dist && npx esbuild index.js --bundle --platform=node --format=cjs --outfile=dist/index.cjs --external:fastify-plugin --external:js-yaml --external:@seriousme/openapi-schema-validator",
+		"build": "mkdir -p dist && npx esbuild index.js --bundle --platform=node --format=cjs --outfile=dist/index.cjs --external:fastify-plugin --external:js-yaml",
 		"format": "biome format --write .",
 		"test": "c8 node --test test/test-*.js && biome format --write . && biome ci .",
 		"test:typescript": "tsc --noEmit",
